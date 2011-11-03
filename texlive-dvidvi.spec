@@ -1,3 +1,9 @@
+# revision 23089
+# category TLCore
+# catalog-ctan /dviware/dvidvi
+# catalog-date 2011-02-05 10:39:32 +0100
+# catalog-license other-free
+# catalog-version 1.0
 Name:		texlive-dvidvi
 Version:	1.0
 Release:	1
@@ -37,6 +43,7 @@ specified, as well as inclusions and exclusions.
 %files
 %{_mandir}/man1/dvidvi.1*
 %{_texmfdir}/doc/man/man1/dvidvi.man1.pdf
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -49,3 +56,5 @@ mkdir -p %{buildroot}%{_datadir}
 cp -fpar texmf %{buildroot}%{_datadir}
 mkdir -p %{buildroot}%{_mandir}/man1
 mv %{buildroot}%{_texmfdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
