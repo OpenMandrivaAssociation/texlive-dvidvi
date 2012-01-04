@@ -6,7 +6,7 @@
 # catalog-version 1.0
 Name:		texlive-dvidvi
 Version:	1.0
-Release:	1
+Release:	2
 Summary:	Convert one DVI file into another
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/dviware/dvidvi
