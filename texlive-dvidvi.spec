@@ -1,4 +1,4 @@
-# revision 26689
+# revision 29764
 # category TLCore
 # catalog-ctan /dviware/dvidvi
 # catalog-date 2012-05-07 18:30:58 +0200
@@ -6,7 +6,7 @@
 # catalog-version 1.0
 Name:		texlive-dvidvi
 Version:	1.0
-Release:	3
+Release:	4
 Summary:	Convert one DVI file into another
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/dviware/dvidvi
@@ -34,7 +34,7 @@ specified, as well as inclusions and exclusions.
 #-----------------------------------------------------------------------
 %files
 %{_mandir}/man1/dvidvi.1*
-%{_texmfdir}/doc/man/man1/dvidvi.man1.pdf
+%{_texmfdistdir}/doc/man/man1/dvidvi.man1.pdf
 
 #-----------------------------------------------------------------------
 %prep
@@ -44,24 +44,6 @@ specified, as well as inclusions and exclusions.
 
 %install
 mkdir -p %{buildroot}%{_datadir}
-cp -fpar texmf %{buildroot}%{_datadir}
+cp -fpar texmf-dist %{buildroot}%{_datadir}
 mkdir -p %{buildroot}%{_mandir}/man1
-mv %{buildroot}%{_texmfdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
-
-
-%changelog
-* Tue Aug 07 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.0-3
-+ Revision: 812235
-- Update to latest release.
-
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 1.0-2
-+ Revision: 751194
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 1.0-1
-+ Revision: 718278
-- texlive-dvidvi
-- texlive-dvidvi
-- texlive-dvidvi
-- texlive-dvidvi
-
+mv %{buildroot}%{_texmfdistdir}/doc/man/man1/*.1 %{buildroot}%{_mandir}/man1
