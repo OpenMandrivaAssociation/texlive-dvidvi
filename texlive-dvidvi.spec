@@ -1,17 +1,12 @@
-# revision 33736
-# category TLCore
-# catalog-ctan /dviware/dvidvi
-# catalog-date 2012-05-07 18:30:58 +0200
-# catalog-license other-free
-# catalog-version 1.0
 Name:		texlive-dvidvi
-Version:	1.0
-Release:	14
+Version:	52851
+Release:	1
 Summary:	Convert one DVI file into another
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/dviware/dvidvi
 License:	OTHER-FREE
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dvidvi.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dvidvi.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dvidvi.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -24,12 +19,12 @@ commands; series of pages and page number ranges may be
 specified, as well as inclusions and exclusions.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -38,7 +33,7 @@ specified, as well as inclusions and exclusions.
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0
+%autosetup -p1 -c -a1
 
 %build
 
