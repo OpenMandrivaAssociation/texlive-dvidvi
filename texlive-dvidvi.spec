@@ -1,6 +1,6 @@
 Name:		texlive-dvidvi
 Version:	52851
-Release:	1
+Release:	2
 Summary:	Convert one DVI file into another
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/dviware/dvidvi
