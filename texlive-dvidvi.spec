@@ -3,7 +3,7 @@ Version:	65952
 Release:	1
 Summary:	Convert one DVI file into another
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/dviware/dvidvi
+URL:		https://www.ctan.org/tex-archive/dviware/dvidvi
 License:	OTHER-FREE
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dvidvi.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/dvidvi.doc.r%{version}.tar.xz
